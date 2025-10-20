@@ -139,6 +139,10 @@ img {
   font-size: 25px;
   text-decoration: none;
   grid-area: logo;
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .fish-icon svg {
@@ -425,82 +429,15 @@ img {
 
 
 /* Contact Page */
-/* General reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f8f8f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.contact-container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-}
-
-.contact-container h1 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.contact-container p {
-    margin-bottom: 30px;
-    color: #666;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form label {
-    text-align: left;
-    font-weight: bold;
-    color: #555;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 16px;
-    width: 100%;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #3AAFA9;
-}
-
 .contact-form button {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #3AAFA9;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #2b8a83;
+  background-color: var(--black);
+  border: none;
+  color: white; 
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px; 
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 

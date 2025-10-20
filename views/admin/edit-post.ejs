@@ -13,12 +13,13 @@
 </div>
 
 <form action="/edit-post/<%= data._id %>?_method=PUT" method="POST">
-    
-    <label for="title">Title</label>
-    <input type="text" placeholder="Enter title" name="title" value="<%= data.title %>">
 
-    <label for="body">Content</label>
-    <textarea name="body" cols="50" rows="10" value="<%= data.body %>"></textarea>
+  <label for="title"><b>Title</b></label>
+  <input type="text" placeholder="Post Title" name="title" value="<%= data.title %>">
 
-    <input type="submit" value="Update" class="btn">
+  <label for="body"><b>Content</b></label>
+  <textarea name="body" cols="50" rows="10"><%= data.body %></textarea>
+
+  <input type="submit" value="Update" class="btn">
+
 </form>
