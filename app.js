@@ -50,3 +50,4 @@ app.use('/', require('./server/routes/admin'));
 app.listen(PORT, () => { // Start the server and listen on the defined port
     console.log(`App listening on port ${PORT}`); // Log a message on the terminal when the server starts
 });
+

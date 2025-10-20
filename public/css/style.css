@@ -168,8 +168,12 @@ img {
   grid-area: menu;
 }
 
-.header__logo, .header__nav, .header__button {
-  width: 100%;
+.header__nav {
+  justify-content: flex-start; /* menu căn trái trong cell */
+}
+
+.header__button {
+  justify-content: flex-end; /* button căn phải */
 }
 
 .header__button {
