@@ -22,11 +22,19 @@
     "express": "^5.1.0",
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.18.2",
+    "fs-extra": "^11.3.2",
     "jsonwebtoken": "^9.0.2",
     "method-override": "^3.0.0",
     "mongoose": "^8.19.1"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "nodemon": "^3.1.10"
   }
+
+  "scripts": {
+  "build": "node build.js",
+  "deploy": "gh-pages -d dist"
+}
+
 }
