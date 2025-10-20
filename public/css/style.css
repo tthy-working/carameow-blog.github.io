@@ -139,11 +139,6 @@ img {
   font-size: 25px;
   text-decoration: none;
   grid-area: logo;
-
-  display: inline-flex;    /* flex container */
-  align-items: center;     /* vertically center text + paw */
-  gap: 6px;                /* space between text and paw */
-  width: auto;             /* don’t stretch full width */
 }
 
 .fish-icon svg {
@@ -168,12 +163,8 @@ img {
   grid-area: menu;
 }
 
-.header__nav {
-  justify-content: flex-start; /* menu căn trái trong cell */
-}
-
-.header__button {
-  justify-content: flex-end; /* button căn phải */
+.header__logo, .header__nav, .header__button {
+  width: 100%;
 }
 
 .header__button {
@@ -261,7 +252,6 @@ img {
 .author_bio {
   font-size: clamp(1rem, 0.5vw + 0.9rem, 1.25rem);
   margin: 10px 0 40px 0;
-  color: var(--gray);
 }
 
 
