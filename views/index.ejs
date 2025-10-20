@@ -1,0 +1,42 @@
+<div class="Author">
+    <h1 class="author_heading">Hi, I am Cara!</h1>
+    <p class="author_bio">A coder who loves gadgets, cats, and delicious food. I spend my days writing code and my free time
+         exploring the world, trying new dishes, and chasing little adventures. I blog about my journeys in tech, travel, and
+         everyday curiosities with a playful and curious spirit.</p>
+</div>
+
+<img src="/img/photographer.jpg" alt="me mirror selfie with my camera, looking out through a window" class="w-[981px] h-[582px] object-cover">
+
+<section class="articles">
+    <h2 class="articles__heading" style="font-weight: bold;">Latest Posts</h2>
+    
+    <ul class="article-ul">
+        <% data.forEach(post => { %> 
+        <li>
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list_date"><%= post.createdAt.toDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+
+<div class="pagination">
+    <%# Previous button %>
+  <% if (prevPage) { %>
+    <a href="/?page=<%= prevPage %>">Previous</a>
+  <% } %>
+
+    <%# Page numbers %>
+  <% for (let i = 1; i <= totalPages; i++) { %>
+    <a href="/?page=<%= i %>" class="<%= i === currentPage ? 'active' : '' %>">
+      <%= i %>
+    </a>
+  <% } %>
+
+    <%# Next button %>
+  <% if (nextPage) { %>
+    <a href="/?page=<%= nextPage %>">Next</a>
+  <% } %>
+</div>
+</section>
