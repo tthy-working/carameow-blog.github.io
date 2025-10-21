@@ -39,8 +39,8 @@ const authMiddleware = (req, res, next ) => {
 router.get('/admin', async (req, res) => { // Define a route for the root URL
   try {
     const locals = {
-    title: "Admin",
-    description: "Simple blog built with NodeJs, Express & MongoDb"
+      title: "Admin",
+      description: "Simple blog built with NodeJs, Express & MongoDb"
   };
   
     res.render('admin/index', { locals, layout: adminLayout });  // render once — after data is loaded
@@ -60,7 +60,7 @@ router.post('/admin', async (req, res) => { // Define a route for the root URL
     
     const user = await User.findOne({ username });
     if(!user) {
-        return res.status(401).json({ message: 'Invalid credentials' });
+      return res.status(401).json({ message: 'Invalid credentials' });
     }
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
@@ -72,7 +72,7 @@ router.post('/admin', async (req, res) => { // Define a route for the root URL
     res.cookie('token', token, { httpOnly: true });
     res.redirect('/dashboard');
 
-} catch (error) {
+  } catch (error) {
     console.log(error);
   }
 });
@@ -144,9 +144,9 @@ router.post('/add-post', authMiddleware, async (req, res) => {
 
         await Post.create(newPost);
         res.redirect('/dashboard');
-    } catch (error) {
+      } catch (error) {
         console.log(error);
-    }
+      }
 
   } catch (error) {
     console.log(error);
